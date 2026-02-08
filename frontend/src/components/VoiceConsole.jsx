@@ -5,6 +5,9 @@ export default function VoiceConsole() {
   const [status, setStatus] = useState("Idle");
   const [question, setQuestion] = useState("");
   const [response, setResponse] = useState("Awaiting input.");
+  const elevenLabsKey = import.meta.env.VITE_ELEVEN_LABS_KEY?.trim();
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL?.trim() || "http://localhost:3001";
+  const elevenLabsStatus = elevenLabsKey ? "Configured" : "Missing";
 
   const handleAsk = async () => {
     if (!question) {
@@ -27,6 +30,14 @@ export default function VoiceConsole() {
         Push-to-talk placeholder for Eleven Labs integration. Ask a question and the
         AI will translate it into a Cypher query.
       </p>
+      <div className="voice-meta">
+        <p>
+          <strong>Eleven Labs:</strong> {elevenLabsStatus}
+        </p>
+        <p>
+          <strong>API:</strong> {apiBaseUrl}
+        </p>
+      </div>
       <textarea
         rows="3"
         placeholder="Ask: Who are the top knowledge anchors in Product?"

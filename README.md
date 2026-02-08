@@ -16,6 +16,10 @@ npm install
 npm run dev
 ```
 
+### Frontend Environment Variables
+- `VITE_ELEVEN_LABS_KEY` (optional)
+- `VITE_API_BASE_URL` (optional)
+
 ### Backend
 ```bash
 cd backend
@@ -24,11 +28,14 @@ npm run dev
 ```
 
 ## Environment Variables (Backend)
+- `ELEVEN_LABS_API_KEY` (optional)
 - `NEO4J_URI` (optional)
-- `NEO4J_USER` (optional)
+- `NEO4J_USERNAME` (optional)
 - `NEO4J_PASSWORD` (optional)
+- `APP_BASE_URL` (optional)
 - `PORT` (default: 3001)
 
 ## Notes
 - The backend serves sample data by default to keep the MVP self-contained.
 - The frontend includes UI placeholders for voice navigation and text-to-Cypher workflows.
+- The current deployment is hosted at https://special-chainsaw-wv5645jv7vqh5v44.github.dev.
