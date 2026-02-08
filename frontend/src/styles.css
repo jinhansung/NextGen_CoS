@@ -231,6 +231,16 @@ input[type="range"] {
   color: rgba(230, 247, 255, 0.6);
 }
 
+.voice-meta {
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(230, 247, 255, 0.7);
+}
+
+.voice-meta p {
+  margin: 4px 0;
+}
+
 .voice-response {
   margin-top: 16px;
   padding: 12px;
